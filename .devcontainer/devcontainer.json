@@ -1,9 +1,30 @@
 {
   // Name this configuration
   "name": "Codespace for Skills!",
+
   // Use the base codespace image
   "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
 
+  // Set the remote user to "codespace"
   "remoteUser": "codespace",
-  "overrideCommand": false
+
+  // Do not override the default command
+  "overrideCommand": false,
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "customizations": {
+    "vscode": {
+      // Install GitHub Copilot extension
+      "extensions": [
+        "GitHub.copilot"
+      ]
+    },
+    "codespaces": {
+      // Open specific files when the codespace is created
+      "openFiles": [
+        "codespace.md"
+      ]
+    }
+  }
 }
+
